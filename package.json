@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.4",
+    "eslint": "^8.48.0",
+    "jest": "^29.6.4"
+  },
+  "name": "tddbcts",
+  "version": "1.0.0",
+  "main": "sum.ts",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
