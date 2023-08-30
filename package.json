@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "build": "tsc --build",
     "test": "jest"
   },
   "devDependencies": {
@@ -13,5 +14,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "type": "module"
 }
