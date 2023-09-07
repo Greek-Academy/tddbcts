@@ -12,4 +12,7 @@ describe('fizzBuzz', () => {
   it('10の時にBuzzを返す', () => {
     expect(fizzBuzz(10)).toBe('Buzz');
   });
+  it('15の時にFizzBuzzを返す', () => {
+    expect(fizzBuzz(15)).toBe('FizzBuzz');
+  });
 })
