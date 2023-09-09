@@ -11,21 +11,21 @@ export const enum MoneyTypes {
   TEN_THOUSAND = 10000,
 }
 
+const AcceptedMoneys = [
+  MoneyTypes.TEN,
+  MoneyTypes.FIFTY,
+  MoneyTypes.HUNDRED,
+  MoneyTypes.FIVE_HUNDRED,
+  MoneyTypes.THOUSAND,
+];
+
 export class VendingMachine {
   constructor(private internalBalance: number = 0) {}
 
   isAcceptableMoney(money: MoneyTypes): boolean {
-    switch (money) {
-      case MoneyTypes.TEN:
-      case MoneyTypes.FIFTY:
-      case MoneyTypes.HUNDRED:
-      case MoneyTypes.FIVE_HUNDRED:
-      case MoneyTypes.THOUSAND:
-        return true;
-      default:
-        return false;
-    }
+    return AcceptedMoneys.includes(money);
   }
+
   insert(money: MoneyTypes): number {
     if (!this.isAcceptableMoney(money)) return money;
 
