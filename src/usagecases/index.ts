@@ -1,1 +1,1 @@
-export * from './fizzBuzz';
+export * from './vendingMachine';
