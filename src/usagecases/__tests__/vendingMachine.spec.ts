@@ -69,4 +69,9 @@ describe('vendingMachine', () => {
     expect(vm.balance).toBe(0);
   });
 
+  it('5円を入れると投入金額に加算されず返金される', () => {
+    const retunedAmount = vm.insert(MoneyTypes.FIVE);
+    expect(retunedAmount).toBe(5);
+    expect(vm.balance).toBe(0);
+  });
 });
