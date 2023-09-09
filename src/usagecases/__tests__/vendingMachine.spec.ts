@@ -29,4 +29,23 @@ describe('vendingMachine', () => {
     vm.insert(1000);
     expect(vm.balance).toBe(1000);
   });
+
+  it('投入は複数回できる', () => {
+    const vm = new VendingMachine();
+    vm.insert(10);
+    expect(vm.balance).toBe(10);
+
+    vm.insert(50);
+    expect(vm.balance).toBe(60);
+
+    vm.insert(100);
+    expect(vm.balance).toBe(160);
+
+    vm.insert(500);
+    expect(vm.balance).toBe(660);
+
+    vm.insert(1000);
+    expect(vm.balance).toBe(1660);
+    
+  });
 });
