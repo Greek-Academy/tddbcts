@@ -1,12 +1,18 @@
 import { fizzBuzz } from '../fizzBuzz';
 describe('fizzBuzz', () => {
-  it('should return correct answers', () => {
-    // TODO: fizzBuzzの動作が正しいか確認するユニットテストを書く
-    //   - 3の倍数のときにFizz
-    //   - 5の倍数のときにBuzz
-    //   - 3の倍数 & 5の倍数のとき、FizzBuzz
-    //   - それ以外の数字のときは、文字列にして返す
-
-
+  it('3の時fizzを返す', () => {
+    expect(fizzBuzz(3)).toBe('fizz');
+  });
+  it('5の時buzzを返す', () => {
+    expect(fizzBuzz(5)).toBe('buzz');
+  });
+  it('6の時fizzを返す', () => {
+    expect(fizzBuzz(6)).toBe('fizz');
+  });
+  it('10の時buzzを返す', () => {
+    expect(fizzBuzz(10)).toBe('buzz');
+  });
+  it('15の時fizzbuzzを返す', () => {
+    expect(fizzBuzz(15)).toBe('fizzbuzz');
   });
 })

@@ -1,4 +1,10 @@
 export const fizzBuzz = (n: number): string => {
-  // TODO: FizzBuzz問題をクリアするためのコードを書く
-  
+  if(n % 15 === 0){
+    return 'fizzbuzz';
+  }else if(n % 3 === 0){
+    return 'fizz';
+  }else if(n % 5 === 0){
+    return 'buzz';
+  }
+  return ''; 
 }
