@@ -14,8 +14,8 @@ export const enum MoneyTypes {
 export class VendingMachine {
   constructor(private internalBalance: number = 0) {}
 
-  isAcceptableMoney( money: MoneyTypes ): boolean{
-    switch(money){
+  isAcceptableMoney(money: MoneyTypes): boolean {
+    switch (money) {
       case MoneyTypes.TEN:
       case MoneyTypes.FIFTY:
       case MoneyTypes.HUNDRED:
@@ -27,7 +27,7 @@ export class VendingMachine {
     }
   }
   insert(money: MoneyTypes): number {
-    if( !this.isAcceptableMoney(money) ) return money;
+    if (!this.isAcceptableMoney(money)) return money;
 
     this.internalBalance += money;
     return 0;
