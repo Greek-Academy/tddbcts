@@ -1,12 +1,16 @@
-type InsertType = 10 | 50 | 100 | 500 | 1000;
+export const enum MoneyTypes {
+  TEN = 10,
+  FIFTY = 50,
+  HUNDRED = 100,
+  FIVE_HUNDRED = 500,
+  THOUSAND = 1000,
+}
 
 export class VendingMachine {
-  constructor(
-    private internalBalance: number = 0,
-  ) {}
+  constructor(private internalBalance: number = 0) {}
 
-  insert(num: InsertType) {
-    this.internalBalance += num;
+  insert(money: MoneyTypes) {
+    this.internalBalance += money;
   }
 
   get balance() {
