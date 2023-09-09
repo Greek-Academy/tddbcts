@@ -1,7 +1,13 @@
-export class VendingMachine {
-  public sum: number = 0;
+type InsertType = 10 | 50 | 100 | 500 | 1000;
 
-  insert(num: 10 | 50 | 100 | 500 | 1000) {
-    this.sum += num;
+export class VendingMachine {
+  private internalBalance: number = 0;
+
+  insert(num: InsertType) {
+    this.internalBalance += num;
+  }
+
+  get balance() {
+    return this.internalBalance;
   }
 }
