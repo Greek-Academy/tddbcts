@@ -49,7 +49,7 @@ describe('vendingMachine', () => {
     expect(vm.balance).toBe(1660);
   });
 
-  it('払い戻し操作を行うと、投入金額の総計を釣り銭として出力する。', () => {
+  it('払い戻し操作を行うと、投入金額の総計を釣り銭として出力する', () => {
     vm.insert(MoneyTypes.HUNDRED);
     vm.insert(MoneyTypes.THOUSAND);
     vm.insert(MoneyTypes.THOUSAND);
