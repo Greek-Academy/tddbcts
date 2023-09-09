@@ -48,4 +48,20 @@ describe('vendingMachine', () => {
     expect(vm.balance).toBe(1660);
     
   });
+
+  it('払い戻し操作を行うと、投入金額の総計を釣り銭として出力する。', () => {
+    
+    const vm = new VendingMachine();
+    vm.insert(100);
+    vm.insert(1000);
+    vm.insert(1000);
+    vm.insert(10);
+    vm.insert(50);
+    vm.insert(500);
+    expect(vm.balance).toBe(2660);
+
+    const returnedAmount = vm.cancel();
+    expect(returnedAmount).toBe(2660);
+    expect(vm.balance).toBe(0);
+  })
 });

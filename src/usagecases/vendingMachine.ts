@@ -10,4 +10,10 @@ export class VendingMachine {
   get balance() {
     return this.internalBalance;
   }
+
+  cancel(): number {
+    const amount = this.internalBalance;
+    this.internalBalance = 0;
+    return amount;
+  }
 }
